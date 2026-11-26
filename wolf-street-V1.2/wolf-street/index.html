@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>WØLF STREET — Streetwear</title>
+  <meta name="description" content="WØLF STREET. Mais que vestir, é representar. Streetwear com entrega na cidade e retirada.">
+  <meta name="theme-color" content="#08080A">
+  <meta property="og:title" content="WØLF STREET">
+  <meta property="og:description" content="Mais que vestir, é representar.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="WØLF STREET">
+  <!-- TROQUE SEU-DOMINIO pelo endereço publicado: a prévia exige URL completa -->
+  <meta property="og:url" content="https://SEU-DOMINIO.vercel.app/">
+  <meta property="og:image" content="https://SEU-DOMINIO.vercel.app/assets/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="WØLF STREET — Mais que vestir, é representar">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23991B1B'/%3E%3Ctext x='16' y='23' font-size='20' font-family='Impact' text-anchor='middle' fill='%23fff'%3EW%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topo">
+    <p class="topbar">LOTE DE LANÇAMENTO • POUCAS UNIDADES • ENTREGA NA CIDADE</p>
+    <header class="header">
+      <a href="#inicio" class="logo" aria-label="WØLF STREET, início">
+        <img src="assets/logo.png" alt="WØLF STREET" onload="this.nextElementSibling.hidden=true" onerror="this.remove()">
+        <span>WØLF <b>STREET</b></span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#drop">Drop</a>
+        <a href="#medidas">Medidas</a>
+        <a href="#historia">História</a>
+        <a href="admin.html" class="link-adm" id="linkAdm" hidden>Painel ADM</a>
+      </nav>
+      <div class="acoes">
+      <button class="btn-icone" id="abrirConta" type="button" aria-label="Minha conta" hidden>
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+      </button>
+      <button class="btn-carrinho" id="abrirCarrinho" type="button" aria-label="Abrir carrinho">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 8h14l-1 13H6L5 8Z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg>
+        <span class="contador" id="contador">0</span>
+      </button>
+      </div>
+    </header>
+  </div>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container">
+        <p class="kicker">Drop 01</p>
+        <h1>Mais que vestir,<br>é representar.</h1>
+        <p>Estilo, identidade e atitude para quem não passa despercebido.</p>
+        <a class="btn" href="#drop">Explorar o drop</a>
+      </div>
+    </section>
+
+    <section class="secao container" id="drop">
+      <h2>O Drop</h2>
+      <div class="controles">
+        <div class="filtros" id="filtros" role="group" aria-label="Filtrar por categoria"></div>
+        <select id="ordenar" aria-label="Ordenar produtos">
+          <option value="destaque">Destaques</option>
+          <option value="menor">Menor preço</option>
+          <option value="maior">Maior preço</option>
+          <option value="nome">Nome (A–Z)</option>
+        </select>
+      </div>
+      <div class="grid" id="grid"><p class="vazio">Carregando o drop...</p></div>
+      <noscript><p>Ative o JavaScript para ver os produtos.</p></noscript>
+    </section>
+
+    <section class="secao container" id="medidas">
+      <h2>Medidas</h2>
+      <p class="texto">Pegue uma peça que veste bem em você, coloque esticada numa superfície plana e compare. Altura: do ombro (junto à gola) até a barra. Largura: de uma axila à outra. Em calças, a largura é a da cintura. Cada peça tem a própria tabela.</p>
+      <div id="guiaMedidas"></div>
+    </section>
+
+    <section class="historia" id="historia">
+      <div class="container">
+        <p class="kicker">Nossa história</p>
+        <blockquote>A WØLF STREET nasceu para quem leva o estilo a sério e não veste qualquer coisa só para preencher espaço.</blockquote>
+        <p>Unir caimento, presença e postura no dia a dia.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <strong class="rodape-marca">WØLF STREET</strong>
+      <div class="rodape-links">
+        <a id="linkInstagram" target="_blank" rel="noopener">Instagram</a>
+        <a id="linkWhatsapp">WhatsApp</a>
+      </div>
+      <details class="politica">
+        <summary>Política de trocas e devoluções</summary>
+        <h3>Desistência</h3>
+        <p>Em compras feitas pelo site ou WhatsApp, você pode desistir em até 7 dias corridos após receber a peça, sem precisar justificar, com devolução do valor pago, incluindo a entrega (art. 49 do Código de Defesa do Consumidor).</p>
+        <h3>Defeito de fabricação</h3>
+        <p>Você tem até 90 dias após o recebimento para avisar. Temos até 30 dias para resolver; passado esse prazo, você escolhe entre outra peça, reembolso ou abatimento no preço.</p>
+        <h3>Troca de tamanho</h3>
+        <p>Até 7 dias após o recebimento, conforme o estoque. A peça deve estar sem uso, sem lavagem e com etiqueta.</p>
+        <h3>Como pedir</h3>
+        <p>Chame no WhatsApp informando seu nome, a peça e a data da compra. Entrega e devolução são combinadas na própria cidade.</p>
+      </details>
+      <p>Entregas somente na cidade ou retirada em mãos. Prazo e local combinados pelo WhatsApp.</p>
+      <p>&copy; <span id="ano"></span> WØLF STREET. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <dialog class="modal" id="modal" aria-labelledby="mNome">
+    <button class="fechar" type="button" data-fechar aria-label="Fechar">&times;</button>
+    <div class="modal-corpo" id="modalCorpo"></div>
+  </dialog>
+
+  <dialog class="drawer" id="drawer" aria-labelledby="tituloCarrinho">
+    <div class="drawer-topo">
+      <h2 id="tituloCarrinho">Carrinho</h2>
+      <button class="fechar" type="button" data-fechar aria-label="Fechar">&times;</button>
+    </div>
+    <div class="drawer-corpo">
+      <div id="itens"></div>
+      <form id="checkout" novalidate>
+        <fieldset>
+          <legend>Entrega</legend>
+          <label class="opcao"><input type="radio" name="entrega" value="entrega" checked><span id="rotuloEntrega">Entrega na cidade</span></label>
+          <label class="opcao"><input type="radio" name="entrega" value="retirada"><span>Retirada em mãos (grátis)</span></label>
+          <p class="aviso" id="avisoFrete"></p>
+        </fieldset>
+        <fieldset>
+          <legend>Pagamento</legend>
+          <label class="opcao"><input type="radio" name="pagamento" value="pix" checked><span id="rotuloPix">Pix</span></label>
+          <label class="opcao"><input type="radio" name="pagamento" value="cartao"><span>Cartão</span></label>
+        </fieldset>
+        <label class="campo">Seu nome<input name="nome" autocomplete="name" maxlength="60" required></label>
+        <label class="campo" id="campoEndereco">Bairro / Endereço<input name="endereco" autocomplete="street-address" maxlength="160" required></label>
+        <dl class="totais" id="totais" aria-live="polite"></dl>
+        <p class="erro" id="erro" role="alert"></p>
+        <button class="btn btn-cheio" type="submit">Finalizar pedido no WhatsApp</button>
+        <div class="alternativa" id="alternativa" hidden>
+          <p>O WhatsApp não abriu? Use uma das opções:</p>
+          <a class="btn btn-cheio" id="linkPedido">Abrir WhatsApp</a>
+          <button type="button" class="btn-linha" id="copiarPedido">Copiar pedido</button>
+          <textarea id="textoPedido" rows="6" readonly hidden aria-label="Texto do pedido"></textarea>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <dialog class="drawer" id="conta" aria-labelledby="tituloConta">
+    <div class="drawer-topo">
+      <h2 id="tituloConta">Minha conta</h2>
+      <button class="fechar" type="button" data-fechar aria-label="Fechar">&times;</button>
+    </div>
+    <div class="drawer-corpo">
+      <form id="formAcesso">
+        <div class="abas" role="tablist">
+          <button type="button" role="tab" data-modo="entrar" aria-selected="true">Entrar</button>
+          <button type="button" role="tab" data-modo="cadastrar" aria-selected="false">Criar conta</button>
+        </div>
+        <p class="aviso">A conta é opcional. Você pode comprar sem entrar.</p>
+        <label class="campo" id="campoNomeCadastro" hidden>Nome<input name="nome" autocomplete="name" maxlength="60"></label>
+        <label class="campo">E-mail<input name="email" type="email" autocomplete="email" required></label>
+        <label class="campo">Senha<input name="senha" type="password" autocomplete="current-password" minlength="6" required></label>
+        <p class="status" id="msgAcesso" role="alert"></p>
+        <button class="btn btn-cheio" type="submit" id="btnAcesso">Entrar</button>
+      </form>
+      <div id="areaCliente" hidden>
+        <div class="destaque"><strong id="pecas">0</strong><span>Peças compradas</span></div>
+        <a class="btn-linha" href="admin.html" id="linkAdmConta" hidden>Painel ADM</a>
+        <form id="formPerfil">
+          <p class="rotulo">Meus dados</p>
+          <label class="campo">Nome<input name="nome" maxlength="60" autocomplete="name"></label>
+          <label class="campo">Telefone<input name="telefone" type="tel" maxlength="20" autocomplete="tel"></label>
+          <label class="campo">Bairro<input name="bairro" maxlength="160"></label>
+          <p class="status" id="msgPerfil" role="alert"></p>
+          <button class="btn btn-cheio" type="submit">Salvar dados</button>
+        </form>
+        <p class="rotulo">Meus pedidos</p>
+        <div id="meusPedidos"></div>
+        <button type="button" class="btn-linha" id="sair">Sair</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/produtos.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/conta.js"></script>
+</body>
+</html>

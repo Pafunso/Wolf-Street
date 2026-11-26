@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+<rect width="800" height="1000" fill="#141417"/>
+<g transform="translate(-400 -420) scale(2)"><g fill="#26262b"><path d="M210 560 Q210 340 400 340 Q590 340 590 560 Z"/><path d="M200 560 L600 560 Q690 575 700 620 Q500 590 200 600 Z"/></g><rect x="445" y="500" width="46" height="8" fill="#991B1B"/></g>
+<text x="40" y="950" font-size="24" letter-spacing="6" fill="#71717a" font-family="Arial,sans-serif">MATILHA / DETALHE</text>
+</svg>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Painel ADM — WØLF STREET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <noscript>Ative o JavaScript.</noscript>
+  <div id="painel" hidden>
+    <header class="adm-topo">
+      <h1>Painel ADM</h1>
+      <a href="index.html">Ver loja</a>
+    </header>
+    <nav class="adm-abas" role="tablist">
+      <button type="button" role="tab" data-aba="produtos" aria-selected="true">Produtos</button>
+      <button type="button" role="tab" data-aba="pedidos" aria-selected="false">Pedidos</button>
+    </nav>
+    <p class="adm-msg" id="msg" role="status" hidden></p>
+    <main class="adm">
+      <section data-painel="produtos">
+        <button type="button" class="btn btn-cheio" id="novo">Nova peça</button>
+        <button type="button" class="btn-linha" id="importar" hidden>Importar produtos iniciais</button>
+        <div id="lista"></div>
+      </section>
+      <section data-painel="pedidos" hidden>
+        <div class="filtros" id="filtroPedidos">
+          <button type="button" data-status="pendente" aria-pressed="true">Pendente</button>
+          <button type="button" data-status="confirmado" aria-pressed="false">Confirmado</button>
+          <button type="button" data-status="cancelado" aria-pressed="false">Cancelado</button>
+        </div>
+        <div id="pedidos"></div>
+      </section>
+    </main>
+
+    <dialog class="drawer" id="editor" aria-labelledby="tituloEditor">
+      <div class="drawer-topo">
+        <h2 id="tituloEditor">Peça</h2>
+        <button class="fechar" type="button" id="fecharEditor" aria-label="Fechar">&times;</button>
+      </div>
+      <div class="drawer-corpo">
+        <form id="formProduto">
+          <label class="campo">Nome<input name="nome" required maxlength="90"></label>
+          <div class="duas">
+            <label class="campo">Preço (R$)<input name="preco" inputmode="decimal" required></label>
+            <label class="campo">Preço original<input name="preco_original" inputmode="decimal"></label>
+          </div>
+          <label class="campo">Categoria<input name="categoria" list="categorias" required></label>
+          <datalist id="categorias"></datalist>
+          <label class="campo">Tag<input name="tag" placeholder="DROP 01" maxlength="30"></label>
+          <label class="campo">Descrição<textarea name="descricao" rows="4"></textarea></label>
+          <p class="rotulo">Estoque e medidas</p>
+          <p class="aviso">Estoque vazio: o tamanho não existe. Zero: aparece riscado.</p>
+          <table>
+            <thead><tr><th>Tam.</th><th>Estoque</th><th>Altura</th><th>Largura</th></tr></thead>
+            <tbody id="grade"></tbody>
+          </table>
+          <p class="rotulo">Fotos (4:5)</p>
+          <p class="aviso">A primeira é a frente e a segunda, as costas.</p>
+          <div id="fotos"></div>
+          <label class="btn-linha enviar">Adicionar fotos<input type="file" id="arquivos" accept="image/*" multiple></label>
+          <label class="opcao"><input type="checkbox" name="ativo" checked><span>Visível na loja</span></label>
+          <p class="erro" id="erroProduto" role="alert"></p>
+          <button class="btn btn-cheio" type="submit" id="salvar">Salvar peça</button>
+        </form>
+      </div>
+    </dialog>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/produtos.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
